@@ -1,0 +1,14 @@
+<h1><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+Chatterbox</h1>
+<p>Say whatever you want. No really.</p>
+<hr/>
+
+<%@messages.each do |msg|%>
+  <div class="message-box">
+    <h4><%=msg[:user]%> </h4>
+    <p><%=msg[:content]%></p>
+    <h6><%= msg[:posted_at].strftime("%l:%M - %b %d")  %></h6>
+  </div>
+
+<%end%>
+

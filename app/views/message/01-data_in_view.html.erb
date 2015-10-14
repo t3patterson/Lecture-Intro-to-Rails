@@ -1,0 +1,19 @@
+<
+<% messages = [
+      {user: "Dr Nick", content: "hello everybody", posted_at: Time.now - 60*3},
+      {user: "Thomas", content: "hi doctor Nick!", posted_at: Time.now - 60*2},
+      {user: "Julie", content: "hey doctor Nick!", posted_at: Time.now - 60*1}
+    ]
+%>
+
+<% messages.each do |msg|%>
+  <div class="message-box">
+    <h4><%=msg[:user]%> </h4>
+    <p><%=msg[:content]%></p>
+    <h6><%= msg[:posted_at].strftime("%l:%M - %b %d")  %></h6>
+  </div>
+
+<%end%>
+
+
+

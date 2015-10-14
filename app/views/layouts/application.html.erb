@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IntroToRuby</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <h1><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+  Chatterbox</h1>
+  <p>Say whatever you want. No really.</p>
+  <hr/>
+  <%= yield %>
+</div>
+
+</body>
+</html>
